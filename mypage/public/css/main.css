@@ -1,0 +1,1656 @@
+@font-face {
+    font-family: 'Merriweather';
+    src: url('../fonts/Merriweather-Bold.eot');
+    src: url('../fonts/Merriweather-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Merriweather-Bold.woff2') format('woff2'),
+        url('../fonts/Merriweather-Bold.woff') format('woff'),
+        url('../fonts/Merriweather-Bold.ttf') format('truetype'),
+        url('../fonts/Merriweather-Bold.svg#Merriweather-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    src: url('../fonts/Merriweather-Regular.eot');
+    src: url('../fonts/Merriweather-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Merriweather-Regular.woff2') format('woff2'),
+        url('../fonts/Merriweather-Regular.woff') format('woff'),
+        url('../fonts/Merriweather-Regular.ttf') format('truetype'),
+        url('../fonts/Merriweather-Regular.svg#Merriweather-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    overflow-x: hidden;
+    margin: 0;
+    font-family: 'Open Sans', serf;/*, sans-serif;*/
+    font-weight: normal;
+    color: #121E30;
+    font-size: 16px;
+    letter-spacing: 0.03em;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather';
+    font-weight: bold;
+    letter-spacing: 0.06em;
+    color: #54577C;
+    
+}
+p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+ul, li {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+h1 {
+    font-size: 52px;
+}
+a {
+    text-decoration: none;
+    color: #121E30; 
+}
+.title-color {
+    color: #5A6678;
+}
+.container {
+    margin: 0 auto;
+    width: 85vw;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    min-height: 840px;
+}
+
+.main-bg {
+    position: absolute;
+    z-index: 0;
+    right: 0;
+    width: 60%;
+    height: 80vh;
+    min-height: 670px;
+    
+    background: #EFF4F4 right top;
+}
+.header {
+    display: flex;
+    align-items: flex-end;
+    height: 115px;
+    min-height: 115px;
+    position: relative;
+    z-index: 2;
+}
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo__text {
+  font-family: 'Merriweather';
+  margin-left: 18px;    
+}
+.logo__text-first {
+    font-size: 18px;    
+}
+.logo__text-second {
+    font-size: 14px; 
+    letter-spacing: 0.027em;   
+}
+.menu {
+    position: relative;
+    margin-right: 5%; 
+}
+.gamburger {
+    position: relative;
+    z-index: 99;
+    display: none;
+}
+.gamburger img {
+    width: 40px;
+    height: auto;
+}
+.navbar {
+    display: flex;
+    position: relative;
+    font-weight: bold;
+    font-size: 15px;   
+}
+.navbar li {
+    cursor: pointer;
+}
+.navbar > li {
+    margin-left: 40px;
+}
+.navbar li:first-child {
+    margin-left: 0;
+}
+.navbar li:first-child div:first-child {
+    display: flex;
+    align-items: center;
+}
+.caret {
+    background: url('../img/caret-down.svg');
+   height: 10px;
+   width: 10px;
+   margin-left: 10px;
+}
+.menu-sub {
+    display: none;
+} 
+.menu-sub-active li {
+    transition: 0.2s ease;
+}
+.menu-sub-active li a {
+    display: block;
+    padding: 10px 15px;
+}
+.menu-sub-active li:hover {
+    background: #6E7988; 
+}
+.menu-sub-active li:hover a{
+    color: #fff;
+}
+.menu-sub-active {
+    position: absolute;
+    z-index: 99;
+    top: 30px;
+    left: 0;
+    background: #E0E8E8;
+    display: block !important;
+}
+.navbar__item-vert {
+    display: none;
+}
+.phone {
+    font-weight: bold;
+    font-size: 18px;
+}
+.main-content {
+    height: 75vh;
+    min-height: 630px;
+    position: relative;
+    z-index: 1;
+}
+.main-content .container {
+    margin-right: 0;
+    width: 92.5%;
+}
+.main-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main-block__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 60vh;
+    min-height: 440px;
+    width: 561px;
+}
+.title-over {
+    font-size: 14px;
+}
+.text-info {
+    position: relative;
+    margin-top: 30px;
+    padding-left: 25px;
+    font-size: 18px;
+    border-left: 4px solid #54577C;
+}
+.main-block__buttons {
+    margin-top: 70px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-decoration: none;
+    width: 265px;
+    height: 62px;
+    font-family: 'Merriweather';
+    font-weight: bold;
+}
+.but-puppy {
+    background: #067D7D;
+}
+.but-moreabout {
+    background: #CCB7AE;
+    margin-left: 31px;
+}
+.phone-vistablet {
+    display: none;
+}
+.folowUs {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    color: #6E7988;
+}
+.folowUs__text {
+    margin-right: 30px;
+}
+.socials a {
+    margin-left: 20px;
+}
+.socials a:first-child {
+    margin-left: 0;
+}
+.main-block__image {
+    background: url('../img/main.jpg') no-repeat right top;
+    width: 52vw;
+    height: 0; /*height: 75vh; */
+    padding-top: 45%;
+    background-size: 100%; /*cover; */
+}
+
+
+            /*Second section*/
+
+.features {
+    padding-top: 140px;
+}
+.features img {
+    display: block;
+}
+.section__title {
+    font-size: 45px;
+} 
+.section__title {
+    margin-bottom: 72px;
+}
+.feature {
+    display: flex;
+    justify-content: space-between;
+}
+.feature__videoes {
+    width: 49%;
+    position: relative;
+}
+.feature__video-main {
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    height: 100%;
+    background-size: cover;
+}
+.video-content {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.tab-content {
+    display: none;
+}
+.work__video-main li:nth-child(1) {
+    background: url('../img/work1.jpg') no-repeat right center;
+}
+.work__video-main li:nth-child(2) {
+    background: url('../img/work2.jpg') no-repeat center center;
+}
+.active {
+    display: block;
+}
+.work__video-sub .active {
+    border: solid 2px #54577C;
+}
+.video-content .play {
+    position: absolute;
+    bottom: calc( 50% - 35.5px );
+    left: calc(50% - 35.5px );
+}
+.play {
+    width: 55px;
+}
+.feature__bg {
+    left: -7.5vw;
+    bottom: -160px;
+    position: absolute;
+    z-index: 0;
+    width: 465px;
+    height: 320px;
+    background: #EFF4F4;
+}
+.sub-pic {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+    border-left: 4px solid #54577C;
+}
+.work__video-sub {
+    display: flex;
+    padding-left: 35px;
+    margin-top: 26px;
+}
+.work__video-sub li {
+    cursor: pointer;
+}
+.work__video-sub li:nth-child(2) {
+    margin-left: 32px;
+}
+.feature__description {
+    width: 37vw;
+} 
+.feature__heading {
+    position: relative;
+    padding-top: 30px;
+    padding-left: 35px;
+    margin-bottom: 40px;
+}
+.heading__bg {
+    z-index: 0;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    background: #F0EAE7;
+    width: 64px;
+    height: 73px;
+}
+.feature__title {
+    position: relative;
+    z-index: 1;
+    font-size: 32px;
+} 
+.defense {
+    margin-top: 250px;
+}
+.indent-left {
+    margin-left: 7.5%;
+    width: 92.5%;
+}
+.defense .feature__description {
+    width: 42vw;
+}
+.defense__video {
+    width: 47%;
+
+}
+.defense__video div:nth-child(1) {
+    background: url('../img/defense.jpg') no-repeat right center;
+}
+.simple-grow {
+    margin-right: 7.5%;
+    width: 92.5%;
+    margin-top: 250px;
+}
+.simple-grow__pic {
+    width: 55%;
+}
+.simple-grow__photo {
+    background: url('../img/simple.jpg') no-repeat left top;
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+}
+.simple-grow__description {
+    padding: 40px 0 40px 0;
+}
+.simple-grow {
+    margin-top: 145px;
+}
+.simple-grow .feature__heading {
+    margin-bottom: 0;
+}
+.simple-grow__title {
+    max-width: 470px;
+}
+.simple-grow__text {
+    width: 57vw;
+    margin-left: -20vw;
+    background: #fff;
+    padding: 40px;
+    padding-right: 0;
+    opacity: 0.8;
+}
+.we-white {
+    margin-top: 150px;
+}
+.we-white__heading {
+    display: flex;
+    align-items: center;
+}
+.we-white__smile {
+    margin-left: 15px;
+}
+.we-white__info {
+    margin-top: 15vh;
+}
+.we-white__photo {
+    background: url(../img/white.png) no-repeat right bottom;
+    width: 100%;
+    height: 0;
+    padding-top: 80.604%;
+    max-height: 694px;
+    background-size: 100%;
+}
+
+                      /*Third section*/
+
+.our-dogs {
+    margin-top: -70px;
+    padding-top: 260px;
+    padding-bottom: 125px;
+    background: #EFF4F4;
+} 
+/*.parents {
+    margin-top: 100px;
+}*/
+.our-dogs__title {
+    font-size: 30px;
+    
+} 
+.slider-parents {
+    margin: 0 auto;
+    position: relative;
+    margin-top: 75px;
+    text-align: center;
+    position: relative;
+}
+.slick-track{
+    display: flex;
+    align-items: flex-start;
+}
+.slick-list {
+    overflow: hidden;
+}
+.slick-arrow {
+    cursor: pointer;
+    border: 0;
+    font-size: 0;
+    position: absolute;
+    z-index: 3;
+    width: 40px;
+    height: 40px;
+    top: calc( 50% - 20px );
+    opacity: 0.7;
+}
+.slick-arrow.slick-prev {
+    transform: rotate(-90deg);
+    left: 0;
+}
+.slick-arrow.slick-next {
+    transform: rotate(90deg);
+    right: 0;
+}
+.growingup-dogs {
+    margin-top: 100px;
+}
+.growingup-dogs__block {
+    margin-top: 75px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.nika {
+    width: 32.065%;/*width: 31.83823533%;*/
+}
+.nura {
+    width: 31.17647059%;
+}
+.flex-break {
+    flex-basis: 100%;
+    height: 0;
+    display: none;
+}
+.nezhna {
+    width: 28.45588235%;
+}
+.growingup-dogs__dog img {
+    width: 100%;
+}
+.dog__description {
+    margin-top: 20px;
+}
+.dog__name {
+    font-size: 22px;
+    text-transform: uppercase;
+}
+.dog__info {
+    font-size: 22px;
+    margin-top: 7px;
+}
+.info__sex {
+    font-weight: bold;
+    margin-left: 55px;
+}
+.dog__info {
+    display: flex;
+}
+.our-dogs__button {
+    margin-top: 75px;
+}
+
+               /*Fourth section*/
+
+.contacts {
+    color: #fff !important;
+    padding-top: 100px;
+    background: url('../img/contact-bg.jpg') no-repeat center center;
+    background-size: cover;
+}
+.contacts .container {
+    margin-left: 0;
+    width: 92.5%;
+}
+.contacts__title {
+    color: #fff;
+    margin-left: 7.5vw;
+}
+.contacts-wrapper {
+    /*margin-top: 85px;*/
+    display: flex;
+    align-items: center;
+} 
+.map {
+    background: #fff;
+    width: 60%;
+    height: 70vh;
+} 
+.contacts__text {
+    margin-left: 50px;
+}  
+.contacts__string {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+.contacts__phone {
+    font-size: 18px;
+}
+.phone-name {
+    margin-left: 40px;
+    font-size: 18px;
+}
+.email-name {
+    margin-left: 20px;
+    font-size: 18px;
+}
+.contacts__distination {
+    margin-top: 10px;
+}
+
+           /*Footer*/
+
+.footer {
+    position: relative;
+    z-index: 1;
+    color: #fff !important;
+    background: #121E30;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.footer__block {
+    display: flex;
+    justify-content: space-between;
+} 
+.footer__first-coloumn  {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+} 
+.about-kennel {
+    line-height: 1.5em;
+}
+.footer__rights {
+    font-size: 15px;
+} 
+.footer__tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+} 
+.footer__tabs > li {
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 40px;
+}
+.footer__tabs li:first-child {
+    margin-left: 0;
+} 
+.footer__tab-sub li {
+    font-size: 16px;
+    font-weight: normal;
+    margin-top: 10px;
+}
+.footer__tabs li a {
+    color: #fff;
+}
+.footer__socials img {
+    height: 24px;
+    width: auto;
+}
+
+             /*Puppies*/
+
+.header-subpages {
+    align-items: center;
+    background:#EFF4F4;
+}
+.page {
+    padding: 50px 0 40px 0;
+}
+.breadcrump {
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 55px;
+}
+.pedigree-picture {
+    margin-bottom: 70px;
+    background: url('../img/pedigree.jpg') no-repeat center center;
+    width: 100%;
+    height: 0;
+    padding-top: 45%;
+    background-size: 100%;
+}
+.puppies__block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.puppies__puppy {
+    width: 31%;
+}
+.puppy__photo img {
+    width: 100%;
+}
+.puppy__caption {
+    margin: 10px 0 30px 0;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+}
+.puppy__name {
+    font-weight: bold;
+}
+
+            /*Puppy-info page*/
+
+.container1 {
+    width: 1170px;
+    margin: 0 auto;
+}
+.puppy-main {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+.puppy-main__photoes {
+    position: relative;
+    width: 505px;
+}
+.slider-puppy-for {
+    position: relative;
+}
+.slider-puppy-for .slick-list img {
+    z-index: 2 !important;
+}
+.puppy__bg {
+    left: calc((1170px - 100vw)/2);
+    bottom: -30px;
+    position: absolute;
+    z-index: 0;
+    width: calc((100vw - 1170px)/2 + 300px);
+    height: 420px;
+    background: #EFF4F4;
+}
+.puppy-main__photoes .sub-pic {
+    border: none;
+}
+.puppy__sub {
+    display: flex;
+    align-items: center;
+    margin-left: -10px;
+    margin-top: 10px; /*26*/
+}
+.puppy__sub img {
+    cursor: pointer;
+    //width: 60px;
+    margin-left: 10px; /*14*/
+    margin-top: 10px;
+}
+.puppy-pic-active {
+    outline: 2px solid #54577C;
+}
+.puppy-main__text {
+    margin-top: 70px;
+    width: calc(1170px - 505px - 55px);
+}
+.puppy-main__title-fromtablet {
+    display: none;
+}
+.puppy-main__title,.puppy-main__title-fromtablet  {
+    font-size: 34px;
+    text-transform: uppercase;
+    margin-bottom: 37px;
+}
+.puppy-main__info p {
+    margin-bottom: 18px;
+}
+.puppy__phone {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.puppy-videos {
+    position: relative;
+    z-index: 1;
+}
+.puppy-subtitle {
+    font-size: 25px;
+    margin: 40px 0 40px 0;
+}
+
+            /*Events*/
+
+.event {
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+.event:first-child {
+    margin-top: 0;
+}
+.event__photo {
+    position: relative;
+}
+.event__photo-left {
+    padding-left: 117px;
+}
+.event__photo img {
+    position: relative;
+    z-index: 1;
+}
+.event-bg {
+    position: absolute;
+    bottom: -30px;
+    background: #EFF4F4;
+    width: 480px;
+    height: 510px;
+}
+.event-bg-left {
+    left: 0;
+}
+.event__text {
+    padding-top: 25px;
+}
+.event__text-left {
+    margin-left: 50px;
+}
+.event__heading {
+    margin-top: 70px;
+}
+.event__title {
+    font-size: 35px;
+}
+.smile-title {
+    padding-right: 50px;
+}
+.event__heading img {
+    position: absolute;
+    padding-left: 20px;
+}
+.event__content {
+    margin-top: 60px;
+}
+.event__pedigree {
+    position: relative;
+    z-index: 1;
+    background: url("../img/pedigree.jpg") center center no-repeat;
+    width: 100%;
+    height: 0;
+    padding-top: 45%;
+    background-size: 100%;
+}
+.event-rotate {
+    flex-direction: row-reverse;
+}
+.event__photo-right {
+    padding-right: 117px;
+}
+.event-bg-right {
+    right: 0;
+    bottom: -140px;
+}
+.event__text-right {
+    margin-right: 50px;
+}
+.event:last-child {
+    margin-bottom: 50px;
+}
+
+            /*About*/
+
+.about__title {
+    margin: 55px 0 50px 0;
+    font-size: 30px;
+}
+.about__photo {
+    height: auto;
+    margin-bottom: 15px;
+}
+.about__photo img {
+    width: 100%;
+}
+.about__text-block p {
+    margin-bottom: 18px;
+}
+
+            /*Adaptibility*/
+
+@media (min-width: 1550px) {
+    .work__video-main, .defense__video-main {
+        background-size: 100%;
+    }
+    .work__description {
+        padding: 90px 0 !important;
+    }
+    .defense .feature__description {
+        padding: 90px 0 !important;
+    }
+    .simple-grow__description {
+        padding: 100px 0 !important;
+    }
+}            
+
+@media (min-width: 1400px) {
+    .work__description {
+        padding: 40px 0;
+    }
+    .defense .feature__description {
+        padding: 50px 0;
+    }
+} 
+
+@media (min-width: 1300px) {
+    .simple-grow__description {
+        padding: 60px 0;
+    }
+    .slider-parents .slick-slide {
+        margin-left: 50px;
+    }
+
+}
+
+@media (max-width: 1605px) {
+    .dog__name, .dog__info  {
+        font-size: 18px;
+    }    
+}
+
+@media (max-width: 1487px) {
+    .main-block__image {
+        width: 50vw;
+    }
+    .dog__name, .dog__info  {
+        font-size: 18px;
+    }    
+}
+
+@media (max-width: 1400px) {
+    .menu {
+        margin-right: 0;
+    }
+    .navbar > li {
+        margin-left: 30px;
+    }
+    
+    h1 {
+        font-size: 40px;
+    }
+    .section__title {
+        font-size: 37px;
+    }
+    .main {
+        min-height: 700px;
+    }
+    .main-bg {
+        min-height: 720px;
+    }
+    .main-content {
+        min-height: 500px;
+    }
+    .main-block__text {
+       width: 35vw;
+       height: 70vh;
+       min-height: 490px;
+       
+    }
+    .but-moreabout {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    .main-block__buttons {
+        margin-top: 40px;
+    }
+    .container1  {
+        width: 85vw;
+        margin-right: 7.5vw;
+        margin-left: 7.5vw;
+    }
+    .puppy-main__photoes {
+        width: 44%; /*40 */
+    }
+    .puppy__bg {
+        width: 100%;
+        left: -7.5vw;
+    }
+    .puppy-main__text {
+        margin-top: 0;
+        width: 50%;   /*54 */
+    }
+    .puppy-main__title {
+        font-size: 27px !important;
+    }
+    .puppy-main__info {
+        font-size: 16px;
+    }
+
+    .about__text-block p {
+        font-size: 16px;
+    }
+
+}
+
+@media (max-width: 1322px) {
+    .name-break {
+        display: block;
+      flex-basis: 100%;
+      height: 0;
+    }
+    .dog__info {
+        margin-top: 25px;
+    }
+}  
+
+@media (max-width: 1210px) {
+    h1 {
+        font-size: 35px;
+    }
+    .section__title {
+        font-size: 33px;
+    }
+    .feature__title {
+        font-size: 27px;
+    }
+    .our-dogs__title {
+        font-size: 27px;
+    }
+    .navbar {
+        top: 40px;
+        width: 200px;
+        display: none;
+    }
+    .gamburger, .navbar__item-vert {
+        display: block;
+    }
+    .navbar__dogs {
+        display: none;
+    }
+    .navbar li {
+        margin-left: 0;
+    }
+    .navbar__dogs {
+        padding: 0 !important;
+    }
+    .navbar-sub__dogs {
+        display: block;
+        position: inherit;
+        z-index: 3;
+    }
+     .main-block__image {
+        width: 52vw;
+    }
+    
+    .simple-grow__description {
+        padding: 0;
+    }
+    .we-white {
+        margin-top: 120px;
+    }
+    .we-white__photo {
+        background: url(../img/white.png) no-repeat right top;
+        padding-top: 80.604%;
+        height: 0;
+        background-size: 100%;
+    }
+    .we-white__info {
+        margin-top: 10vh;
+    }
+    .our-dogs {
+        margin-top: -30px;
+        padding-top: 200px;
+    }
+    .footer {
+        font-size: 16px !important;
+    }
+    .footer__tab-sub li {
+        font-size: 14px;
+    }
+    .footer__rights {
+        font-size: 13px;
+    }
+
+    .event__title {
+        font-size: 30px;
+    }
+} 
+
+@media (max-width: 1115px) {
+    h1 {
+        font-size: 30px;
+    }
+    .feature__title {
+        font-size: 25px;
+    }
+    .our-dogs__title {
+        font-size: 25px;
+    }
+
+    .main-bg {
+        height: 100vh;
+    }
+    .main-block__image {
+        background-size: 100%;
+    } 
+    .main-block__info {
+        font-size: 16px;
+    }
+    .folowUs__text {
+        display: none;
+    }
+    .growingup-dogs  {
+        margin-top: 75px;
+    }
+    .slider-parents, .growingup-dogs__block {
+        margin-top: 55px;
+    } 
+    
+    .footer__tabs > li {
+        margin-left: 30px;
+    }
+    .feature__text {
+        font-size: 16px;
+    }
+
+    .event-bg {
+        height: 350px;
+        width: 100%;
+    }
+    .event-bg-left {
+        margin-left: -7.5vw;
+    }
+    .event-bg-right {
+        margin-right: -7.5vw;
+    }
+    .event__photo {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .event__photo-right {
+        width: 100%;
+    }
+    .birth-pic {
+        width: 100%;
+    }
+}
+
+@media (max-width: 1080px) { /*1060*/
+    .nezhna {
+        align-self: flex-end;
+    }
+    .break-dog {
+      display: block;
+    }
+    .name-break {
+        display: inline;
+    }
+    .dog__info {
+        margin-top: 10px;
+    }
+    .nika {
+        width: 48.0975%;/*1.5 * 32.065%; */
+    }
+    .nura {
+        width: 46.764705885%; /*1.5 * 31.17647059%*/
+    }
+    .nezhna {
+        margin-top: 40px;
+        width: 48.0975%;
+    }
+    .map {
+        width: 80%;
+    }
+
+   .footer__block {
+        flex-direction: column;
+    } 
+    .footer__first-coloumn {
+        order: 1;
+        margin-top: 30px;
+    } 
+    .footer__rights {
+        margin-top: 10px;
+    } 
+    .feature__bg {
+        width: 400px;
+    }
+
+    .puppy-main__title {
+        margin-bottom: 15px !important;
+    }
+    .puppy-main__info p {
+        margin-bottom: 10px;
+    }
+
+    .event__photo {
+        width: 40%;
+    }
+    .event__photo-right {
+        width: 70%;
+    }
+    .event__photo img {
+        width: 100%;
+    }
+    .event__text {
+        width: 54%;
+    }
+    .event__title {
+        font-size: 30px;
+    }
+    .event__heading {
+        margin-top: 20px;
+    }
+    .event__content {
+        margin-top: 20px;
+        font-size: 16px;
+    }
+}    
+
+@media (max-width: 905px) {
+    .main {
+        min-height: 586px;
+    }
+    .header {
+        align-items: center;
+        background:#EFF4F4;
+    }
+    .main-content {
+        height: calc( 100vh - 115px);
+        min-height: calc(586px - 115px );
+    }
+    .main-content .container {
+        width: 85vw;
+        margin-right: 7.5vw;
+    }
+    .main-block {
+        margin-top: calc(( 40vh - 115px)/2);
+        margin-bottom: calc(( 40vh - 115px)/2);
+    }
+    .main-block__text {
+        height: 60vh;
+        min-height: 390px;
+    }    
+    .main-bg {
+       min-height: 586px;
+       width: 100%;
+       background: url('../img/main.jpg') no-repeat center top;
+       background-size: cover;
+    }
+    .main-bg::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #15181C;
+        opacity: 0.55;
+    }
+    .main-block__image {
+        display: none;
+    }
+    .main-block__text {
+        width: 560px;
+    }
+    .but-moreabout {
+        margin-left: 30px;
+        margin-top: 0;
+    }    
+    h1 {
+        color: #fff;
+    }
+    .main-block__info {
+        color: #fff;
+        border-color: #fff;
+    }
+    .main-block__title {
+        color: #fff !important;
+    }
+    .folowUs__socials svg {
+        height: 27px;
+        width: auto;
+    }
+    .folowUs__socials path {
+        fill: #fff;
+    }
+    .features {
+        padding-top: 100px;
+    
+    }
+    .section__title {
+        margin-bottom: 55px;
+    }
+    .feature {
+        margin-top: 55px !important;
+        flex-direction: column-reverse;
+        position: relative;
+    } 
+    .feature__videoes {
+        margin-top: 10px;
+        width: 100%;
+    }    
+    .work__video-main {
+        position: relative;
+        height: 0;
+        padding-top: 62%;
+        background-size: 100%;
+    }
+    .video-content {
+        background-size: 100% !important;
+    }
+    .play {
+        position: absolute;
+        bottom: calc( 50% - 35.5px );
+    }
+    .feature__bg {
+        bottom: -50px;
+    }  
+    .feature__description {
+        width: 100%;
+    } 
+    .feature__text {
+        margin-bottom: 10px;
+    }
+    .defense {
+        margin-top: 102px !important;
+    }
+    .defense .feature__description {
+        width: 100%;
+    }
+    .indent-left {
+       width: 85%;
+    }
+    .defense .feature__description {
+        order: 1;
+    }
+    .defense__video {
+        height: 0;
+        padding-top: 58.136%;
+        background-size: 100%;
+        position: relative;
+    }  
+    .defense .feature__text {
+        margin-top: 30px;
+    }  
+    .simple-grow {
+        margin-top: 72px;
+        margin-left: 7.5%;
+        width: 85%;
+    }  
+    .simple-grow__pic {
+        margin-top: 10px;
+        width: 100%;
+    }
+    .simple-grow__photo {
+        height: 0;
+        padding-top: 75.033%;  
+    }  
+    .simple-grow__text {
+        margin-top: 30px;
+        width: 100%; 
+        margin-left: 0;
+        padding: 0;
+    } 
+    .we-white {
+        margin-top: 72px;
+        padding-bottom: 60px;
+    }
+    .we-white .feature__description {
+        order: 1;
+    }
+    .our-dogs {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        margin-top: 0;
+    }
+
+    .pedigree-picture {
+        margin-bottom: 50px;
+    }
+
+    .event {
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 818px) {
+    .nav__phone {
+        display: none;
+    } 
+    .phone-vistablet {
+        margin-bottom: 15px;
+        display: block;
+        color: #fff;
+    }
+    .menu-sub-active {
+        left: auto;
+        right: 0;
+    }
+    .name-break {
+        display: block;
+    }
+    .dog__info {
+        font-size: 16px;
+        margin-top: 25px;
+        justify-content: space-between;
+    }
+    .info__sex {
+        margin-left: 0;
+    }
+    .contacts__inscription {
+        font-size: 16px;
+    }
+    .puppies__puppy {
+        width: 47%;
+    }
+    .puppy-main__info {
+        font-size: 14px;
+    }
+
+}
+@media (max-width: 726px) {  
+    .contacts {
+        background: url(../img/contact-bg.jpg) no-repeat 75% 130%;
+    }
+    .contacts-wrapper {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        /*margin-top: 50px;*/
+    }
+    .map {
+        width: 100vw;
+        height: 60vh;
+    }
+    .contacts__text {
+        margin-bottom: 50px;
+    }
+    .contacts__text {
+        margin-left: 7.5vw;
+    }
+    .footer__tabs-main {
+        justify-content: center;
+    }
+    .footer__tabs-main > li {
+        width: 40%;
+        margin-left: 0;
+    }
+    .footer__tabs-main li:nth-child(2) {
+        order: 4;
+    }
+    .footer__tabs-main li:nth-child(3) {
+        order: 2;
+    }
+    .footer__tabs-main > li:nth-child(4),
+    .footer__tabs-main > li:nth-child(2) {
+     
+        text-align: right;
+    }
+    .footer__tabs-col {
+        margin-top: 20px;
+    }
+    .footer__first-coloumn {
+        margin-left: 10%;
+    }
+    .puppy-main__title-fromtablet {
+        text-align: center;
+        display: block;
+    }
+    .puppy-main__title {
+        display: none;
+    }
+    .puppy-main {
+        padding-bottom: 0;
+        flex-direction: column;
+    }
+    .puppy__bg {
+        width: 60%;
+    }
+    .puppy-main__photoes {
+        width: 100%;
+    }
+    .puppy-main__text {
+        margin-top: 50px;
+        position: relative;
+        z-index: 1;
+        width: 100%;
+    }
+
+    .event__title {
+        font-size: 25px;
+    }
+
+    .puppy-videos iframe {
+        width: 100%;
+
+    }
+}
+@media (max-width: 659px) { 
+    .main {
+        min-height: 700px;
+    }
+    .main-bg {
+       min-height: 700px;
+    }   
+    .main-block {
+        margin-top: calc(( 30vh - 115px)/2);
+        margin-bottom: calc(( 30vh - 115px)/2);
+
+    }
+    .main-content {
+        min-height: calc(700px - 115px );
+    }
+    .main-block__text {
+        height: 70vh;
+        min-height: 490px;
+    }
+    .main-block__buttons {
+        flex-direction: column;
+    }
+    .but-moreabout {
+        margin-left: 0;
+        margin-top: 15px;
+    }
+    .break-date {
+        display: block;
+        flex-basis: 100%;
+    }
+
+    .event {
+        margin-top: 50px;
+        flex-direction: column-reverse;
+    }
+    .event-bg {
+        display: none;
+    }
+    .event__text {
+        margin-bottom: 30px;
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .event__photo {
+        text-align: center;
+        width: 100%;
+    }
+    
+} 
+
+@media (max-width: 561px) {  
+    .main-block__info {
+        border: none;
+        padding: 0;
+    }
+    .main-block {
+        text-align: center;
+    }
+    .but-puppy {
+        margin: 0 auto;
+    }    
+    .but-moreabout {
+        margin: 15px auto;
+    } 
+    .main-block .folowUs__socials {
+        margin: 0 auto;
+    } 
+    .section__title {
+        text-align: center;
+    }
+    .feature__bg {
+        width: 80%;
+    } 
+    .feature__title, .our-dogs__title {
+        font-size: 22px;
+    }
+
+    .growingup-dogs__block {
+        flex-direction: column;
+    }
+    .growingup-dogs__dog {
+        width: 100%;
+    }
+    .name-break, .break-date {
+        display: inline;
+    }
+    .dog__info {
+        margin-top: 5px;
+        font-size: 18px;
+    }
+    .nura {
+        margin-top: 40px;
+    }
+    .footer__tabs-main {
+        justify-content: space-between;
+    }
+    .footer__first-coloumn {
+        margin-left: 0;
+    }
+    .puppies__puppy {
+        width: 100%;
+    }
+    .puppy__caption {
+        font-size: 16px;
+    }
+    .about__title {
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 425px) {
+    .main-bg {
+        min-height: 740px;
+    }
+    .container, .main-content .container {
+        width: calc(100% - 30px);
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+    .main-block {
+        margin-top: 40px;
+    }
+    .feature {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .feature__heading, .feature__text, .work__video-sub  {
+        width: calc(100% - 30px);
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .growingup-dogs {
+        margin-top: 55px;
+    }
+    .slider-parents, .growingup-dogs__block {
+        margin-top: 45px;
+    }
+    .our-dogs .container {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .dog__description, .our-dogs__title {
+        width: calc(100% - 30px);
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .puppy-main__title-fromtablet {
+        font-size: 30px;
+    }
+
+    .about__title {
+        font-size: 21px;
+    }
+    .about__photo .container1 {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+}  
+@media (max-width: 380px) {
+    .feature__videoes, .simple-grow__pic  {
+        margin-top: 15px;
+    }
+    .footer__tabs-main > li {
+        width: 45%;
+    }  
+    .logo img {
+        width: 60px;
+        height: 60px;
+    }  
+    .logo__text-first {
+        font-size: 15px;
+    }
+    .logo__text-second {
+        font-size: 13px;
+    }
+
+    .puppy-main__title-fromtablet {
+        font-size: 25px;
+    }
+}
+
